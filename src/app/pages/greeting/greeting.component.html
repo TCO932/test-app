@@ -1,0 +1,11 @@
+<div *ngIf="userInfo" class="greeting-container">
+  <img
+    [src]="userInfo.picture.large"
+    alt="Avatar"
+    width="100"
+    height="100"
+    class="avatar"
+  />
+  <h2 class="greeting">Добро пожаловать, {{ getPrettifiedName() }}</h2>
+</div>
+<div *ngIf="!userInfo" class="loading-message">Загрузка...</div>
